@@ -14,6 +14,36 @@
       height: 100%;
       font-family: Arial, sans-serif;
     }
+    .header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+    .header-logo img {
+      height: 40px;
+    }
+    .header-links {
+      display: flex;
+      gap: 30px;
+    }
+    .header-links a {
+      color: #222;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+      transition: color 0.2s;
+    }
+    .header-links a:hover {
+      color: #00796b;
+    }
     .hero {
       position: relative;
       height: 100vh;
@@ -24,6 +54,7 @@
       color: white;
       text-align: center;
       flex-direction: column;
+      padding-top: 100px; /* To avoid header overlap */
     }
     .hero-text {
       position: relative;
@@ -58,52 +89,63 @@
       text-align: center;
       font-size: 1.2em;
     }
+    .footer {
+      width: 100%;
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+    .footer a {
+      color: #fff;
+      text-decoration: underline;
+      margin-left: 5px;
+    }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    .contact-section {
-      padding: 40px 20px;
-      text-align: center;
-      background: #f9f9f9;
+    body {
+      padding-top: 80px; /* For fixed header */
+      padding-bottom: 60px; /* For fixed footer */
     }
-    .contact-section h2 {
-      margin-bottom: 20px;
-    }
-    .contact-form {
-      max-width: 400px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .contact-form label {
-      text-align: left;
-      font-weight: bold;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 1em;
-    }
-    .contact-form button {
-      background-color: #000;
-      color: #fff;
-      border: none;
-      padding: 12px;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .contact-form button:hover {
-      background-color: #444;
+    @media (max-width: 600px) {
+      .header, .hero {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px 10px;
+      }
+      .header-links {
+        gap: 15px;
+      }
+      .footer {
+        font-size: 0.9em;
+        padding: 12px 0;
+      }
     }
   </style>
 </head>
 <body>
+  <header class="header">
+    <div class="header-logo">
+      <a href="/">
+        <img src="./assets/images/logo.png" alt="Giraffa Solutions Logo" />
+      </a>
+    </div>
+    <nav class="header-links">
+      <a href="/">Accueil</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
   <section class="hero">
     <div class="hero-text">
       <h1>Bienvenue chez Giraffa Solutions</h1>
@@ -123,20 +165,9 @@
     </p>
   </section>
 
-  <section class="contact-section">
-    <h2>Contactez-nous</h2>
-    <form class="contact-form" action="mailto:contact@giraffa.solutions" method="POST" enctype="text/plain">
-      <label for="name">Nom :</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Email :</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="message">Message :</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit">Envoyer</button>
-    </form>
-  </section>
+  <footer class="footer">
+    &copy; 2025 Giraffa Solutions — 
+    <a href="/mentions-legales.html">mentions légales</a>
+  </footer>
 </body>
 </html>
