@@ -131,6 +131,52 @@
         padding: 12px 0;
       }
     }
+    .solutions-group {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 40px 0 0 0;
+      flex-wrap: wrap;
+    }
+    .solution {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 300px;
+      text-align: center;
+    }
+    .solution-btn {
+      text-decoration: none;
+      background-color: #ffffff;
+      color: #000000;
+      padding: 14px 32px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: transform 0.3s, background 0.3s;
+      border: 2px solid #00796b;
+    }
+    .solution-btn:hover {
+      background-color: #00796b;
+      color: #fff;
+      transform: scale(1.05);
+    }
+    .solution-desc {
+      font-size: 1em;
+      color: #333;
+    }
+    @media (max-width: 900px) {
+      .solutions-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+      .solution {
+        max-width: 90vw;
+      }
+    }
   </style>
 </head>
 <body>
@@ -151,10 +197,26 @@
       <h1>Bienvenue chez Giraffa Solutions</h1>
       <p>Des solutions innovantes pour un avenir durable</p>
     </div>
-    <div class="button-group">
-      <a href="https://giraffa.solutions/GIRA-PMO">GIRA-PMO</a>
-      <a href="https://giraffa.solutions/GIRA-RFE">GIRA-RFE</a>
-      <a href="https://giraffa.solutions/GIRA-DSI">GIRA-DSI</a>
+  </section>
+
+  <section class="solutions-group">
+    <div class="solution">
+      <a href="https://giraffa.solutions/GIRA-PMO" class="solution-btn">GIRA-PMO</a>
+      <div class="solution-desc">
+        Pilotage de projets, portefeuille et PMO externalisé pour une gestion efficace et transparente.
+      </div>
+    </div>
+    <div class="solution">
+      <a href="https://giraffa.solutions/GIRA-RFE" class="solution-btn">GIRA-RFE</a>
+      <div class="solution-desc">
+        Référent numérique externalisé pour accompagner votre transformation digitale en toute sérénité.
+      </div>
+    </div>
+    <div class="solution">
+      <a href="https://giraffa.solutions/GIRA-DSI" class="solution-btn">GIRA-DSI</a>
+      <div class="solution-desc">
+        Direction des Systèmes d’Information à temps partagé pour structurer et sécuriser votre SI.
+      </div>
     </div>
   </section>
 
