@@ -4,42 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Giraffa Solutions</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: url('/assets/images/home1.png') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+    .hero-text {
+      position: absolute;
+      z-index: 2;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px 40px;
+      border-radius: 10px;
+    }
+    .below-text {
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 1.2em;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Giraffa Solutions</h1>
-    <nav>
-      <ul>
-        <li><a href="#gira-pmo">Gira-PMO</a></li>
-        <li><a href="#gira-rfe">Gira-RFE</a></li>
-        <li><a href="#gira-dsi">Gira-DSI</a></li>
-      </ul>
-    </nav>
-  </header>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Bienvenue chez Giraffa Solutions</h1>
+      <p>Des solutions innovantes pour un avenir durable</p>
+    </div>
+  </section>
 
-  <main>
-    <section id="gira-pmo">
-      <h2>Gira-PMO</h2>
-      <p>Automatisez la collecte des indicateurs et la création des supports de comité. Gagnez du temps et concentrez-vous sur l’essentiel : piloter et réussir vos projets.</p>
-    </section>
-
-    <section id="gira-rfe">
-      <h2>Gira-RFE</h2>
-      <p>Simplifiez la transition vers la facturation électronique. Suivi, conformité, pilotage : tout est centralisé pour une réforme maîtrisée, efficace et sans stress.</p>
-    </section>
-
-    <section id="gira-dsi">
-      <h2>Gira-DSI</h2>
-      <p>Aidez les DSI à auditer, piloter et convaincre. En un clic, générez vos indicateurs clés pour le CODIR : finances, roadmap, sécurité… Décidez mieux, montrez votre impact.</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Giraffa Solutions – Tous droits réservés</p>
-    <p>6, avenue Neil Armstrong, 33700 Mérignac</p>
-  </footer>
-
-  <script src="js/script.js"></script>
+  <section class="below-text">
+    <p>
+      Giraffa Solutions accompagne les entreprises dans leur transition digitale
+      avec une approche responsable, humaine et tournée vers l'impact positif.
+    </p>
+  </section>
 </body>
 </html>
