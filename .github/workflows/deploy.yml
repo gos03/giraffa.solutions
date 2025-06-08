@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3v4
+        uses: actions/checkout@v4
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -31,4 +31,4 @@ jobs:
           path: ./  # ou ./dist si tu mets tes fichiers générés dans un dossier
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2v4
+        uses: actions/deploy-pages@v4
