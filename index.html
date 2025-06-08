@@ -17,24 +17,50 @@
     .hero {
       position: relative;
       height: 100vh;
-      background: url('./assets/images/home1.png') no-repeat center center/cover;
+      background: url('./assets/image.jpg') no-repeat center center/cover;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
       text-align: center;
+      flex-direction: column;
     }
     .hero-text {
-      position: absolute;
+      position: relative;
       z-index: 2;
       background-color: rgba(0, 0, 0, 0.5);
       padding: 20px 40px;
       border-radius: 10px;
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .button-group {
+      display: flex;
+      gap: 20px;
+      z-index: 2;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    .button-group a {
+      text-decoration: none;
+      background-color: #ffffff;
+      color: #000000;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .button-group a:hover {
+      background-color: #dddddd;
+      transform: scale(1.05);
     }
     .below-text {
       padding: 40px 20px;
       text-align: center;
       font-size: 1.2em;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -43,6 +69,11 @@
     <div class="hero-text">
       <h1>Bienvenue chez Giraffa Solutions</h1>
       <p>Des solutions innovantes pour un avenir durable</p>
+    </div>
+    <div class="button-group">
+      <a href="https://giraffa.solutions/GIRA-PMO">GIRA-PMO</a>
+      <a href="https://giraffa.solutions/GIRA-RFE">GIRA-RFE</a>
+      <a href="https://giraffa.solutions/GIRA-DSI">GIRA-DSI</a>
     </div>
   </section>
 
