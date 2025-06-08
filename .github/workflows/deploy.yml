@@ -17,7 +17,6 @@ concurrency:
 jobs:
   deploy:
     name: Deploy to GitHub Pages
-    url: ${{ steps.deploy-pages.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
